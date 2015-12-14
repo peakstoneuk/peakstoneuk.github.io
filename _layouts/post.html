@@ -13,3 +13,49 @@ layout: default
   </div>
 
 </article>
+
+
+<!-- Post #4 -->
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <!-- Replaces Post Media Tag -->
+    <section class="post_content">
+
+        <!-- Post Header -->
+        <header class="post_header">
+
+            <!-- Post Title -->
+            <div class="post_title" itemprop="name headline">{{ page.title }}</div>
+
+            <!-- Post Date -->
+            <div class="post_date">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: "%b %-d, %Y" }}
+                </time>
+            </div>
+
+        </header>
+
+        <!-- Post Body -->
+        <div class="post_body" itemprop="articleBody">
+            {{ content }}
+        </div>
+
+        <!-- Post Footer -->
+        <footer class="post_footer">
+
+            <!-- Social Media Buttons -->
+            <div class="post_social_media">
+                <a href="https://www.facebook.com/sharer.php?t={{ page.title }}>&amp;u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="share_facebook" title="Share on Facebook">
+                    <i class="fa fa-thumbs-up"></i>Share
+                </a>
+                <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share_twitter" title="Share on Twitter">
+                    <i class="fa fa-twitter"></i>Tweet
+                </a>
+            </div>
+
+        </footer>
+
+    </section>
+
+</article>
