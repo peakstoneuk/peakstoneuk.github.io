@@ -19,4 +19,5 @@ github_username:  snsmurf
 
 # Build settings
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
 
