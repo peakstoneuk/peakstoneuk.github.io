@@ -15,7 +15,7 @@
             <!-- Nav Bar (LEFT) -->
             <nav>
                 <ul>
-                    <li><a href="/" class="nav_link"{%if page.url == '/index.html' %} id="nav_current"{% endif %}>Home</a></li>
+                    <li><a href="/" class="nav_link"{%if page.url == '/index.html' or page.url == '/' or page.url contains '/blog' %} id="nav_current"{% endif %}>Home</a></li>
                 {% for my_page in site.pages %}
                     {% if my_page.title %}
                         <li><a class="nav_link"{%if my_page.url == page.url %} id="nav_current"{% endif %} href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
@@ -24,11 +24,8 @@
                     <li><a href="http://twitter.com/mikebarlow" target="_blank" class="nav_link" title="Contact">Contact</a></li>
                 </ul>
             </nav>
-
         </div>
-
     </div>
-
 </header>
 
 <!-- Subheader -->
