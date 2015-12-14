@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+I'm a PHP Web Developer from Sheffield, UK. Currently working at [Aiir](http://aiir.com) and also the co-founder of [WHSuite](http://whsuite.com) - an online hosting / domain billing solution, currently in Beta / Release Candidate stage.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I have a great desire to learn more and push myself to do better with the code I wrote, hence this new personal site. With a full time job and trying to release WHSuite, free time for learning more and improving my own skills and knowledge has taken a back seat. Hopefully this personal site will give me a push to learn more and write about what I've learnt
