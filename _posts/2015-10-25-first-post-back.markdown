@@ -2,7 +2,6 @@
 layout: post
 title:  "First Post Back"
 date:   2015-10-25 20:39:28 +0000
-permalink: /blog/:year/:month/:day/:title/
 ---
 
 So this is my first post back on my personal site. Using this site as a testing playground and also a writing platform to try and learn more and increase my skills.
