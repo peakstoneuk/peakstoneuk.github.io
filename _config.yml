@@ -12,7 +12,7 @@ description: Web Home of MikeBarlow a UK Based Web Developer currently working a
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mikebarlow.co.uk" # the base hostname & protocol for your site
 twitter_username: mikebarlow
-github_username:  snsmurf
+github_username:  mikebarlow
 permalink: /blog/:year/:month/:day/:title/
 
 # Build settings
