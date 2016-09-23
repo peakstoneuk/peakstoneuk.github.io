@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing an AWS Elastic Load Balancer with your hosts file"
+title:  "Testing an AWS Elastic Load Balancer"
 date:   2016-09-23 21:00:00 +0000
 ---
 So recently I was faced with a problem with needing to test an AWS Elastic Load Balancer (ELB) that was serving multiple domains and I needed to test this before the domains was transfered over. This is normally ok as you can simply edit your hosts file and add something similar to
