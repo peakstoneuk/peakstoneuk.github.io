@@ -24,7 +24,11 @@ Before any reports can be retrieved you will need account numbers and vendor num
 
     $Reporter->setAccountNum('1234567');
 
-An array of vendors available to that account number can be retrieved with the simple `$Reporter->getSalesVendors()` command. This returns an array of VendorIds that be used to get sales reports for, these sales reports include the downloads / updates for all your apps. To get the report you will need to specify a range of data, the example below is to get the sales data for one day, this will include info on the App and the category it belongs to as well as the customers Currency code and country code and finally the download / update information. To get this data use the following method:
+An array of vendors available to that account number can be retrieved with the simple call to:
+
+    $Reporter->getSalesVendors()
+
+This returns an array of VendorIds that be used to get sales reports for, these sales reports include the downloads / updates for all your apps. To get the report you will need to specify a range of data, the example below is to get the sales data for one day, this will include info on the App and the category it belongs to as well as the customers Currency code and country code and finally the download / update information. To get this data use the following method:
 
     $Reporter->getSalesReport(
         1234567, // VendorId
