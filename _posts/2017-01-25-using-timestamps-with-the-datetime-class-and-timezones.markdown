@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Timestamps with the DateTime class and timezones"
+title:  "Timestamps, DateTime class and timezones!"
 date:   2017-01-25 22:00:00 +0000
 ---
 
