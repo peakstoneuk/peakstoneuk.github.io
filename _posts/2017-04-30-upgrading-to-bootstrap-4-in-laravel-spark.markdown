@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Upgrading to Bootstrap 4 in Laravel Spark"
-date:   2017-04-01 22:00:00 +0000
+date:   2017-04-30 22:00:00 +0000
 ---
 
 This is a post I've been meaning to write for a while however a recent post on the Laravel Slack channel gave me the nudge to actually do it!
@@ -31,17 +31,17 @@ Spark as default uses LESS, the new Bootstrap ships with SASS as it's default cs
 	@import "variables";
 	@import "bower_components/bootstrap/scss/bootstrap";
 	@import "bower_components/font-awesome/scss/font-awesome";
-	
+
 Next you will need to open up the Laravel Mix config file found in the root of Spark called `webpack.mix.js`. The first line of Mix config in this file should read
 
 	mix.less('resources/assets/less/app.less', 'public/css')
-	
+
 Change this to
 
 	mix.sass('resources/assets/scss/app.scss', 'public/css')
-	
-Then add `'bower_components'` to the `webpackConfig` method underneath `node_module`:
-	
+
+Then add `'bower_components'` to the `webpackConfig` method underneath `node_modules`:
+
 	.webpackConfig({
 	    resolve: {
 	        modules: [
@@ -65,7 +65,7 @@ Copy out the file found at `spark/resources/assets/js/spark-bootstrap.js` and pa
 
 Next open up `resources/assets/js/app.js` and modify `require('spark-bootstrap');` by prepending ./ to spark-bootstrap, so it reads `require('./spark-bootstrap');`. Once complete run `npm run dev` to recompile the JS.
 
-At this point the CSS / JS switch is pretty much complete, from here you should be able to start building your own theme for Spark in Bootstrap 4. There are some compatibility changes required however due to changes between Bootstrap 3 and 4.
+At this point the CSS / JS switch is pretty much complete, from here you should be able to start building your own theme for Spark in Bootstrap 4. There are some compatibility changes required however for the prebuilt Spark sections such as user settings and Kiosk due to changes between Bootstrap 3 and 4.
 
 ## Compatability Changes
 
@@ -76,7 +76,7 @@ I'll post one example change below, this is from the `update-extra-billing-infor
 	<spark-update-extra-billing-information :user="user" :team="team" :billable-type="billableType" inline-template>
 	    <div class="panel panel-default">
 	        <div class="panel-heading">Extra Billing Information</div>
-	
+
 	        <div class="panel-body">
 	            <!-- Information Message -->
 	            <div class="alert alert-info">
@@ -84,24 +84,24 @@ I'll post one example change below, this is from the `update-extra-billing-infor
 	                business name, VAT number, or address of record. Do not include any confidential or
 	                financial information such as credit card numbers.
 	            </div>
-	
+
 	            <!-- Success Message -->
 	            <div class="alert alert-success" v-if="form.successful">
 	                Your billing information has been updated!
 	            </div>
-	
+
 	            <!-- Extra Billing Information -->
 	            <form class="form-horizontal" role="form">
 	                <div class="form-group" :class="{'has-error': form.errors.has('information')}">
 	                    <div class="col-md-12">
 	                        <textarea class="form-control" rows="7" v-model="form.information" style="font-family: monospace;"></textarea>
-	
+
 	                        <span class="help-block" v-show="form.errors.has('information')">
 	                            @{{ form.errors.get('information') }}
 	                        </span>
 	                    </div>
 	                </div>
-	
+
 	                <!-- Update Button -->
 	                <div class="form-group m-b-none">
 	                    <div class="col-md-offset-4 col-md-8 text-right">
@@ -120,7 +120,7 @@ Within my project, this became
 	<spark-update-extra-billing-information :user="user" :team="team" :billable-type="billableType" inline-template>
 	    <div class="card card-info">
 	        <h5 class="card-header text-white">Extra Billing Information</h5>
-	
+
 	        <div class="card-block">
 	            <!-- Information Message -->
 	            <div class="alert alert-info">
@@ -128,24 +128,24 @@ Within my project, this became
 	                business name, VAT number, or address of record. Do not include any confidential or
 	                financial information such as credit card numbers.
 	            </div>
-	
+
 	            <!-- Success Message -->
 	            <div class="alert alert-success" v-if="form.successful">
 	                Your billing information has been updated!
 	            </div>
-	
+
 	            <!-- Extra Billing Information -->
 	            <form class="form-horizontal" role="form">
 	                <div class="form-group" :class="{'has-error': form.errors.has('information')}">
 	                    <div class="col-md-12">
 	                        <textarea class="form-control" rows="7" v-model="form.information" style="font-family: monospace;"></textarea>
-	
+
 	                        <span class="help-block" v-show="form.errors.has('information')">
 	                            @{{ form.errors.get('information') }}
 	                        </span>
 	                    </div>
 	                </div>
-	
+
 	                <!-- Update Button -->
 	                <div class="form-group m-b-none">
 	                    <div class="col-md-offset-4 col-md-8 text-right">
@@ -158,8 +158,8 @@ Within my project, this became
 	        </div>
 	    </div>
 	</spark-update-extra-billing-information>
-	
-It's worth noting here as well, that Cards now change the colour of everything within the Card. Previously specifying `panel-danger` would only change the panel header. With cards specifying `card-danger` will change the card header and body. If you want to revert back to a more panel like setup, below is the SASS that I used to accomplish this, you may need to modifying it to suit your needs.
+
+It's worth noting here as well, that Cards now change the colour of everything within the Card. Previously specifying `panel-danger` would only change the panel header and border colours. With cards, specifying `card-danger` will change the card header and body. If you want to revert back to a more panel like setup, below is the SASS that I used to accomplish this, you may need to modifying it to suit your needs. I simply placed this within my `app.scss` file under the last _@import_.
 
 	.card.card-primary,
 	.card.card-success,
@@ -174,13 +174,13 @@ It's worth noting here as well, that Cards now change the colour of everything w
 
 I repeated this for all the panels within the settings area, simply changing the card "type" to get different coloured cards for my settings.
 
-Next change was amending the grid. Previously `col-xs-12` would specify a full width column on the smallest screen size, this is no longer in use, simply use `col-12`. The main places these are in, are within the `update-payment-method-stripe.blade.php` file for the card expiration dates.
+Next change was amending the grid. Previously `col-xs-X` would specify a column size on the smallest screen size, this is no longer in use, simply use `col-X`, where _X_ is the number of columns. The main places these are in, are within the `update-payment-method-stripe.blade.php` file for the card expiration dates.
 
 For the settings menu, the list group can now sit as a direct child of the card element and use the `list-group-flush` class.
-	
+
 	<div class="card card-success">
 	    <h5 class="card-header misc text-white">Settings</h5>
-	
+
 	    <div class="spark-settings-tabs">
 	        <ul class="list-group list-group-flush" role="tablist">
 	            <li class="list-group-item" role="presentation">
@@ -188,7 +188,7 @@ For the settings menu, the list group can now sit as a direct child of the card 
 	                    <i class="fa fa-fw fa-btn fa-edit"></i>Profile
 	                </a>
 	            </li>
-	
+
 	            <!-- Teams Link -->
 	            @if (Spark::usesTeams())
 	                <li class="list-group-item" role="presentation">
@@ -197,14 +197,14 @@ For the settings menu, the list group can now sit as a direct child of the card 
 	                    </a>
 	                </li>
 	            @endif
-	
+
 	            <!-- Security Link -->
 	            <li class="list-group-item" role="presentation">
 	                <a href="#security" aria-controls="security" role="tab" data-toggle="tab">
 	                    <i class="fa fa-fw fa-btn fa-lock"></i>Security
 	                </a>
 	            </li>
-	
+
 	            <!-- API Link -->
 	            @if (Spark::usesApi())
 	                <li class="list-group-item" role="presentation">
@@ -216,8 +216,8 @@ For the settings menu, the list group can now sit as a direct child of the card 
 	        </ul>
 	    </div>
 	</div>
-	
-For the last main HTML change, the structure of dropdown menus has also changed. This exaple is taken from my personal project, so it's missing a few of the default links that Spark comes with but it should give you the idea. Buggest change is the way the dropdown-menu elements are written:
+
+For the last HTML change, the structure of dropdown menus has also changed. This example is taken from my personal project, so it's missing a few of the default links that Spark comes with but it should give you the idea. The biggest change is the way the dropdown-menu elements are written:
 
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="/" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -237,7 +237,7 @@ For the last main HTML change, the structure of dropdown menus has also changed.
             </a>
         </div>
     </li>
-    
+
 The last amend I had to make involved amending some more VueJS components. Bootstrap changed where the `active` class sits within a list. In Bootstrap 3 the "li" of a list group has the active class, whereas in 4 in sits on the "a" tag itself. This causes problems with some of the Spark tab switching code.
 
 Again there are a few files to copy from Spark and amend, the first one is simply copied so we can modify the mixin that is attached.
@@ -245,7 +245,7 @@ Again there are a few files to copy from Spark and amend, the first one is simpl
 Copy `spark/resources/assets/js/settings/settings.js` into `resources/assets/js/spark/settings/settings.js`. Next copy `spark/resources/assets/js/mixins/tab-state.js`into `resources/assets/js/mixins/tab-state.js` and open it.
 
 This is the main mixin that handles the switching of tabs within Spark. Find the following method
-	
+
 	removeActiveClassFromTabs() {
 	    $(`${this.pushStateSelector} li`).removeClass('active');
 	},
@@ -255,9 +255,9 @@ and amend the "li" to "a" like so
 	removeActiveClassFromTabs() {
 	    $(`${this.pushStateSelector} a`).removeClass('active');
 	},
-	
+
 Finally, open `resources/assets/js/spark-components/settings/settings.js` and amend the very top line `var base = require('settings/settings');` to read `var base = require('./../../spark/settings/settings');`. This will make Vue / JS load up the settings file we duplicated above, which in turn will load the modified tab-state mixin file!
-	
+
 Re-run `npm run dev` to recompile the JS changes and that should be the port complete. Simply carry on and build / skin Spark as you need for your application.
 
 Apologies if anything was missed from this guide, I didn't think to write a lot of this down at the time when I first did all this so a lot has come from memory and playing with a new Spark installation.
