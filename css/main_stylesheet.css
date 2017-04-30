@@ -340,6 +340,7 @@ nav {
     padding: 35px 50px 35px 50px;
     display: block;
     overflow: auto;
+    overflow-x: hidden;
     width: 816px;
     background: #ffffff;
     color: #74787d;
@@ -937,6 +938,7 @@ nav {
     background: #61b6fe;
     color: #ffffff;
     margin-bottom: 15px;
+    overflow-x: scroll;
 }
 .reply {
     font-style: italic;
