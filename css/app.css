@@ -20674,7 +20674,7 @@ a:hover {
   background-color: #1A1A1A;
   color: #fff;
   margin-bottom: 1.25rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 @media (min-width: 640px){
