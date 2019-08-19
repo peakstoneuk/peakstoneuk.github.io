@@ -4,7 +4,7 @@ layout: default
 {% for post in site.posts %}
     <div class="py-5 border-b last:border-b-0">
         <h2 class="text-4xl leading-tight font-semibold font-display">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="text-gray-900 hover:text-yellow-600">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="text-gray-900 hover:text-yellow-600 no-underline">
                 {{ post.title }}
             </a>
         </h2>
