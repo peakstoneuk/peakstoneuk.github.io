@@ -20666,6 +20666,17 @@ a:hover {
   color: #fff;
 }
 
+.highlight {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #1A1A1A;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  overflow-x: scroll;
+}
+
 @media (min-width: 640px){
   .sm\:sr-only{
     position: absolute;
