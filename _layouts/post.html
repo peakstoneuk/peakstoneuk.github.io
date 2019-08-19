@@ -1,46 +1,23 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="py-5 border-b last:border-b-0">
+        <h2 class="text-4xl leading-tight font-semibold font-display">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="text-gray-900 hover:text-yellow-600 no-underline">
+                {{ page.title }}
+            </a>
+        </h2>
+        <div class="text-gray-500 font-bold pb-5">{{ page.date | date: "%B %-d, %Y" }}</div>
 
-    <!-- Replaces Post Media Tag -->
-    <section class="post_content">
-
-        <!-- Post Header -->
-        <header class="post_header">
-
-            <!-- Post Title -->
-            <div class="post_title" itemprop="name headline">{{ page.title }}</div>
-
-            <!-- Post Date -->
-            <div class="post_date">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {{ page.date | date: "%B %-d, %Y" }}
-                </time>
-            </div>
-
-        </header>
-
-        <!-- Post Body -->
-        <div class="post_body" itemprop="articleBody">
+        <div class="mb-4">
             {{ content }}
         </div>
 
-        <!-- Post Footer -->
-        <footer class="post_footer">
+        <a href="https://www.facebook.com/sharer.php?t={{ page.title }}&amp;u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="btn btn-facebook" title="Share on Facebook">
+            <i class="fab fa-facebook"></i> Share on Facebook
+        </a>
 
-            <!-- Social Media Buttons -->
-            <div class="post_social_media">
-                <a href="https://www.facebook.com/sharer.php?t={{ page.title }}&amp;u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="share_facebook" title="Share on Facebook">
-                    <i class="fa fa-thumbs-up"></i>Share
-                </a>
-                <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share_twitter" title="Share on Twitter">
-                    <i class="fa fa-twitter"></i>Tweet
-                </a>
-            </div>
-
-        </footer>
-
-    </section>
-
-</article>
+        <a href="https://twitter.com/share?text={{ page.title }}&amp;url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="btn btn-twitter" title="Share on Twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+        </a>
+    </div>

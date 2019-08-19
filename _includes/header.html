@@ -1,54 +1,53 @@
-<!-- Header -->
-<header id="header">
+        <div class="container mx-auto mt-10 bg-gray-500 shadow-lg">
+            <div class="md:flex">
+                <div class="md:w-1/4 w-full md:p-4 p-4 pb-0 text-white">
+                    <div class="flex pb-4">
+                        <img src="/img/headshot-square.jpg" alt="me" class="rounded-full xl:h-24 xl:w-24 xl:flex lg:hidden md:hidden flex h-20 w-20 items-center justify-center mr-6">
+                        <div class="align-middle my-auto">
+                            <h1 class="text-2xl font-semibold font-display text-yellow-500">MikeBarlow.uk</h1>
+                            <h4 class="text-lg text-yellow-400">UK Web Developer</h4>
 
-    <div id="header_wrap">
+                            <div class="md:hidden block mt-3">
+                                <a href="https://twitter.com/mikebarlow" target="_blank" class="text-md mr-4 text-yellow-500 hover:text-yellow-600 no-underline">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
 
-        <!-- Logo (LEFT) -->
-        <div id="logo"><a href="/" title="Logo"><img src="/images/logo.jpg" alt="MikeBarlow" /></a></div>
+                                <a href="https://github.com/mikebarlow" target="_blank" class="text-md mr-4 text-yellow-500 hover:text-yellow-600 no-underline">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Navigation (RIGHT) -->
-        <div id="navigation">
+                    <div class="mb-5 md:block hidden">
+                        <h2 class="text-xl text-center font-semibold border-b font-display text-yellow-500">Recent Articles</h2>
 
-            <!-- Responsive Layout Only -->
-            <div class="navigation_title"><i class="fa fa-bars"></i> MENU</div>
+                        <ul>
+                            {% for post in site.posts %}
+                                <li class="py-4 border-b last:border-b-0">
+                                    <a href="{{ post.url | prepend: site.baseurl }}">
+                                        {{ post.title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
 
-            <!-- Nav Bar (LEFT) -->
-            <nav>
-                <ul>
-                    <li><a href="/" class="nav_link"{%if page.url == '/index.html' or page.url == '/' or page.url contains '/blog' %} id="nav_current"{% endif %}>Home</a></li>
-                {% for my_page in site.pages %}
-                    {% if my_page.title %}
-                        <li><a class="nav_link"{%if my_page.url == page.url %} id="nav_current"{% endif %} href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                    <li><a href="http://twitter.com/mikebarlow" target="_blank" class="nav_link" title="Contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+                    <div class="mb-5 md:block hidden">
+                        <h2 class="text-xl text-center font-semibold border-b mb-3 font-display text-yellow-500">About Me</h2>
 
-<!-- Subheader -->
-<header id="subheader">
+                        <p class="text-justify">I am a web developer from Sheffield, UK currently working remotely for InTech Ventures and side hustling on <a href="https://travito.com" target="_blank">Travito</a>, the site builder and booking management for vacation rentals and <a href="https://serverauth.com" target="_blank">ServerAuth</a>, SSH Key Management for Teams.</p>
+                    </div>
 
-    <div id="subheader_wrap">
+                    <div class="text-center md:block hidden">
+                        <a href="https://twitter.com/mikebarlow" target="_blank" class="text-4xl mr-6 text-yellow-500 hover:text-yellow-600 no-underline">
+                            <i class="fab fa-twitter"></i>
+                        </a>
 
-        <!-- Icon Background -->
-        <div id="icon_border"></div>
+                        <a href="https://github.com/mikebarlow" target="_blank" class="text-4xl mr-6 text-yellow-500 hover:text-yellow-600 no-underline">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
 
-    </div>
-
-</header>
-
-<!-- Main Content -->
-<section id="content">
-
-    <!-- Icon -->
-    <div id="icon_wrap">
-
-        <!-- Icon Image can be modified in #Icon CSS Rule -->
-        <div id="icon">
-            <a href="#" title="Icon"><div id="icon_link"></div></a>
-        </div>
-
-    </div>
+                <div class="md:w-3/4 w-full p-5 pt-0 bg-white">

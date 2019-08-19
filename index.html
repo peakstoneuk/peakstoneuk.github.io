@@ -1,54 +1,21 @@
 ---
 layout: default
 ---
-<!-- Content Wrap -->
-<div id="content_wrap">
-    {% for post in site.posts %}
+{% for post in site.posts %}
+    <div class="py-5 border-b last:border-b-0">
+        <h2 class="text-4xl leading-tight font-semibold font-display">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="text-gray-900 hover:text-yellow-600">
+                {{ post.title }}
+            </a>
+        </h2>
+        <div class="text-gray-500 font-bold pb-5">{{ post.date | date: "%B %-d, %Y" }}</div>
 
-        <article class="post">
+        <div class="mb-4">
+            {{ post.excerpt }}
+        </div>
 
-            <!-- Replaces Post Media Tag -->
-            <section class="post_content">
-
-                <!-- Post Header -->
-                <header class="post_header">
-
-                    <!-- Post Title -->
-                    <div class="post_title">
-                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </div>
-
-                    <!-- Post Date -->
-                    <div class="post_date">{{ post.date | date: "%B %-d, %Y" }}</div>
-
-                </header>
-
-                <!-- Post Body -->
-                <div class="post_body">
-
-                    {{ post.excerpt }}
-
-                </div>
-
-                <!-- Post Footer -->
-                <footer class="post_footer">
-
-                    <!-- Social Media Buttons -->
-                    <div class="post_social_media">
-                        <a href="https://www.facebook.com/sharer.php?t={{ post.title }}&amp;u={{ post.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="share_facebook" title="Share on Facebook">
-                            <i class="fa fa-thumbs-up"></i>Share
-                        </a>
-                        <a href="https://twitter.com/share?text={{ post.title }}&amp;url={{ post.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" target="_blank" class="share_twitter" title="Share on Twitter">
-                            <i class="fa fa-twitter"></i>Tweet
-                        </a>
-                    </div>
-
-                </footer>
-
-            </section>
-
-        </article>
-
-    {% endfor %}
-
-</div>
+        <a href="#" class="inline-block px-5 py-2 rounded shadow-md bg-yellow-500 text-gray-700 hover:bg-yellow-600 hover:text-gray-700">
+            Read More
+        </a>
+    </div>
+{% endfor %}

@@ -5,37 +5,14 @@
     <meta name="author" content="Mike Barlow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery - http://jquery.com/ -->
-    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
-
-    <!-- Adds Support for HTML5 on IE6 - IE9 -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Font Awesome by Dave Gandy - http://fontawesome.io/ -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
-    <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Rokkitt:700' rel='stylesheet' type='text/css'>
-
-    <!-- FlexSlider by wooThemes - http://www.woothemes.com/flexslider/ -->
-    <link rel="stylesheet" href="/css/flexslider.css" type="text/css">
-
-    <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="/css/main_stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="/css/responsive_stylesheet.css" type="text/css">
-
-    <!-- Favicon -->
-    <!-- link rel="shortcut icon" href="/images/favicon.ico" -->
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css" type="text/css">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mikebarlow">
     <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:image:src" content="{{ site.baseurl }}/images/mike.jpg">
+    <meta name="twitter:image:src" content="{{ site.baseurl }}/img/headshot-square.jpg">
     <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:creator" content="@mikebarlow">
-
 </head>
