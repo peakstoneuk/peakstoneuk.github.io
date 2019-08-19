@@ -13,6 +13,10 @@ layout: default
             {{ content }}
         </div>
 
+        <a href="/" class="btn btn-primary">
+            Back to all posts
+        </a>
+
         <a href="https://www.facebook.com/sharer.php?t={{ page.title }}&amp;u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" class="btn btn-facebook" title="Share on Facebook">
             <i class="fab fa-facebook"></i> Share on Facebook
         </a>
