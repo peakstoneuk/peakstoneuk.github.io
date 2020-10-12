@@ -8,7 +8,7 @@
 # Site settings
 title: MikeBarlow.co.uk - UK based Web Developer
 email: mike@mikebarlow.co.uk
-description: Web Home of MikeBarlow a UK Based Web Developer currently working for InTech Ventures and side hustling on Travito and ServerAuth
+description: Web Home of MikeBarlow a UK Based Web Developer currently working for Aiir and side hustling on ServerAuth
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mikebarlow.co.uk" # the base hostname & protocol for your site
 twitter_username: mikebarlow
