@@ -30,7 +30,7 @@ Here is team Aiir from our 2016 Christmas get together, sadly Andy (second from 
 
 ### Travito 
 
-No 2020 review post would be complete without a part on side projects! In an effort to focus our efforts, me and my "Side Project Partner", Rick, decided to start finally close and delete, Travito. Travito was our Website Builder for Vacation Rental Owners. Without money behind you for marketing, it's a really tough business to get into without connections. It's legacy will live on however in my Laravel CMS, Aldrumo!
+No 2020 review post would be complete without a part on side projects! In an effort to focus our efforts, me and my "Side Project Partner", Rick, decided to start finally close and delete, Travito. Travito was our Website Builder for Vacation Rental Owners. Without money behind you for marketing, it's a really tough business to get into. Its legacy will live on however in my Laravel CMS, Aldrumo!
 
 ### ServerAuth
 
