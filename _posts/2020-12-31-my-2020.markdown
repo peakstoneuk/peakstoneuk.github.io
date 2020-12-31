@@ -12,7 +12,7 @@ That being said, I decided to write one up anyway to force myself to write. In m
 
 So 2020, didn't get off to the best start for me even before COVID hit. First day back after the christmas break, the 2nd January, I was let go from my job. The less said about that and the employer though the better! Thankfully, one of my friends is a freelance developer and had a small backlog of work that was piling up, so we agreed some figures and he was able to throw some projects my way.
 
-During the early days of job hunting I put some tweets out about job hunting, and a former employer half jokingly got in touch as they were on the hunt for someone. While I was flattered, I initially ruled out the move as they had started to use technologies I was unfamiliar with and I wanted to find something closer to what I'd been doing / using before.
+During the early days of job hunting I put some tweets out about the hunt, and a former employer half jokingly got in touch as they were on the hunt for someone. While I was flattered, I initially ruled out the move as they had started to use technologies I was unfamiliar with and I wanted to find something closer to what I'd been doing / using before.
 
 ## Things are looking up
 
@@ -20,7 +20,7 @@ After a few weeks of job hunting and soul-searching, I couldn't get the tweet fr
 
 As of writing this, I am 31. I started writing code and building websites when I was 13 / 14. I would come home from school, forget about homework and dive into code and while frameworks and some of the other tools have changed, since then I've only ever used PHP / MySQL as my primary tools. I've dabbled with JS, jQuery and basic Vue for the fancy frontend bits but nothing with NodeJS or full blown SPAs with React / VueJS.
 
-So I reached out and we hopped onto a call, and by that evening I was signing on the dotted line to become an employee of [Aiir](https://aiir.com) once again. I officially started 10th February and honestly it's been the best 10 months. They are great people to work for and treat you first and foremost like humans that actually have lives outside of work. In between me leaving and rejoining, they've also gone fully remote, have embraced the "Basecamp" way of working and trust us to get on with our jobs, and I personally feel like it's been one of my most productive periods ever!
+So I reached out and we hopped onto a call, and by the next day I was signing on the dotted line to become an employee of [Aiir](https://aiir.com) once again. I officially started 10th February and honestly it's been the best 10 months of work I've had. They are great people to work for and treat you first and foremost like humans that actually have lives outside of work. In between me leaving and rejoining, they've also gone fully remote, have embraced the "Basecamp" way of working and trust us to get on with our jobs, and I personally feel like it's been one of my most productive periods ever!
 
 ![Team Aiir in 2016](https://mikebarlow.co.uk/img/teamaiir.jpeg "Team Aiir in 2016")
 
@@ -28,9 +28,11 @@ Here is team Aiir from our 2016 Christmas get together, sadly Andy (second from 
 
 ## Side Projects
 
-### Travito 
+No 2020 review post would be complete without a part on side projects!
 
-No 2020 review post would be complete without a part on side projects! In an effort to focus our efforts, me and my "Side Project Partner", Rick, decided to start finally close and delete, Travito. Travito was our Website Builder for Vacation Rental Owners. Without money behind you for marketing, it's a really tough business to get into. Its legacy will live on however in my Laravel CMS, Aldrumo!
+### Travito 
+ 
+In an effort to focus ourselves, me and my "Side Project Partner", Rick, decided to finally close and delete, Travito. Travito was our Website Builder for Vacation Rental Owners. Without money behind you for marketing, it's a really tough business to get into. Its legacy will live on however in my Laravel CMS, Aldrumo!
 
 ### ServerAuth
 
@@ -48,7 +50,7 @@ Here's a screencast gif of the page editor in action.
 
 ![Aldrumo Page Editor](https://mikebarlow.co.uk/img/aldrumo-pages.gif "Aldrumo Page Editor")
 
-There's still bits to finish, and I need to create an installer but that should be coming as an alpha release in early 2021 and I'm excited. It has been difficult to get away from the "how do I make money off this" or "I should be working on something else that makes me money" mentalities, but it's helping me remember those times when I was 14, coming home from school and ignoring homework to write code just for fun as a "hobby" without the stress from social media of making your side projects profitable.
+There's still bits to finish, and I need to create an installer but that should be coming as an alpha release in early 2021 and I'm excited. It has been difficult to get away from the "how do I make money off this" or "I should be working on something else that makes me money" mentalities, but it's helping me remember those times when I was 14, coming home from school and ignoring homework to write code, just for fun as a "hobby". With no stress at all from social media about making money from your side projects!
 
 And after the year we've all had with dealing with COVID, being able to find enjoyment in something is a win!
 
