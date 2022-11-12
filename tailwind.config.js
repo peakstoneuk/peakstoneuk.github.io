@@ -22,6 +22,7 @@ module.exports = {
       black: "#000000",
       yellow: "#f9e71c",
       lila: "#e6e5ec",
+      green: "#00FF00",
       "grey-10": "#6c6b6d",
       "grey-20": "#7c7c7c",
       "grey-30": "#919091",
@@ -33,6 +34,15 @@ module.exports = {
       "hero-gradient-to": "rgba(65, 47, 144, 0.93)",
       "blog-gradient-from": "#8f9098",
       "blog-gradient-to": "#222222",
+      "green-100": "#dcfce7",
+      "green-200": "#bbf7d0",
+      "green-300": "#86efac",
+      "green-400": "#4ade80",
+      "green-500": "#22c55e",
+      "green-600": "#16a34a",
+      "green-700": "#15803d",
+      "green-800": "#166534",
+      "green-900": "#14532d",
     },
 
     container: {
