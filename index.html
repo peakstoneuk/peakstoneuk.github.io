@@ -25,6 +25,13 @@
 
     <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js" ></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script type="text/javascript">
+        Paddle.Initialize({
+            token: 'live_59fe1d59a3a369e3cfb1ff2e16c'
+        });
+    </script>
 </head>
 
 <body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
